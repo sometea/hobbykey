@@ -5,6 +5,7 @@ require('es6-promise').polyfill();
 const config = {
 entry: {
 		bundle: path.join(__dirname, 'client', 'index.js'),
+		tests: path.join(__dirname, 'client', 'tests.js'),
   },
   output: {
     path: path.join(__dirname, 'public/js/generated'),

@@ -3,7 +3,6 @@ import { PostsService } from '../posts/posts.service';
 
 @Component({
   selector: 'my-app',
-  providers: [ PostsService ],
   template: `<h1>Hello World!</h1>
     <div *ngFor="let post of posts">{{ post.title }}</div>
   `
