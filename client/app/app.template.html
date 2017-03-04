@@ -1,0 +1,29 @@
+<div class="container" id="outercontainer">
+  <div class="row" id="outerrow">
+    <div class="col-md-6" id="leftcolumn">
+      <div class="row" id="logorow">
+        <div class="col-md-12" id="logo">
+          <a href="/"><img src="/images/logo.png" alt="logo" /></a>
+        </div>
+      </div>
+      <div class="row" id="leftcontentrow">
+        <div class="col-md-12" id="leftcontent">
+          <h1>Hello World!</h1>
+          <div *ngFor="let post of posts">{{ post.title }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" id="rightcolumn">
+      <div class="row" id="menurow">
+        <div class="col-md-12" id="menu">
+            The menu
+        </div>
+      </div>
+      <div class="row" id="rightcontentrow">
+        <div class="col-md-12" id="rightcontent">
+          <img src="/images/testbild6.jpeg" alt="testbild" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { PostsService } from '../posts/posts.service';
 
+import template from './app.template.html';
+
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello World!</h1>
-    <div *ngFor="let post of posts">{{ post.title }}</div>
-  `
+  template: template,
 })
 export class AppComponent {
   name = 'Angular';
