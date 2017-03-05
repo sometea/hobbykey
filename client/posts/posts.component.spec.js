@@ -7,7 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { PostsComponent } from './posts.component';
-
 import { PostsService } from '../posts/posts.service';
 
 describe('postsComponent', () => {
@@ -31,12 +30,11 @@ describe('postsComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [ PostsComponent ],
-      bootstrap: [ PostsComponent ],
       imports: [ BrowserModule, HttpModule ],
       providers: [{ provide: PostsService, useValue: postsServiceMock }],
     });
 
-    fixture = TestBed.createComponent(postsComponent);
+    fixture = TestBed.createComponent(PostsComponent);
     postsComponent = fixture.componentInstance;
   });
 
