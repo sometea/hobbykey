@@ -11,3 +11,5 @@ require('zone.js/dist/proxy');
 require('zone.js/dist/jasmine-patch');
 
 require('./posts/posts.component.spec.js');
+require('./staticpage/staticpage.component.spec.js');
+require('./releases/releases.component.spec.js');
