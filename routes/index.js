@@ -39,6 +39,9 @@ exports = module.exports = function (app) {
 	app.get('/api/posts', routes.views.posts);
 	app.get('/api/images', routes.views.images);
 
+	// send the index file for all other urls to support angular html5mode
+	app.all('/*', routes.views.index);
+
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 
