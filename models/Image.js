@@ -14,7 +14,11 @@ var Image = new keystone.List('Image');
 Image.add({
   title: { type: Types.Text, initial: true, required: true, index: true },
   file: { type: Types.File, storage: uploadedFilesStorage },
+  url: { type: Types.Text, noedit: true, watch: 'file',
+    value: function() {
+      return 'uploads/' + this.file.filename;
+    }, },
 });
 
-Image.defaultColumns = 'title, file';
+Image.defaultColumns = 'title, file, url';
 Image.register();
