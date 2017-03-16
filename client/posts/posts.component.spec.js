@@ -12,7 +12,7 @@ import { PostsService } from '../posts/posts.service';
 describe('postsComponent', () => {
   let postsComponent = {};
   let fixture = {};
-  const testPosts = [ { title: 'Badgers.' }];
+  const testPosts = [ { title: 'Badgers.', body: { html: 'Hi. '}, }];
 
   beforeAll(()=> {
         TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
