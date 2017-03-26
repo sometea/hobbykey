@@ -6,7 +6,7 @@ const config = {
 entry: {
 		bundle: path.join(__dirname, 'client', 'main.ts'),
     polyfills: path.join(__dirname, 'client', 'polyfills.ts'),
-		//tests: path.join(__dirname, 'client', 'tests.js'),
+		tests: path.join(__dirname, 'client', 'tests.ts'),
   },
   output: {
     path: path.join(__dirname, 'public/js/generated'),

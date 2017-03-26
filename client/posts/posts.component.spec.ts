@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
-import { BrowserDynamicTestingModule, platformBrowserDynamicTesting } from '@angular/platform-browser-dynamic/testing';
 import { DebugElement }    from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,13 +9,9 @@ import { PostsComponent } from './posts.component';
 import { PostsService } from '../posts/posts.service';
 
 describe('postsComponent', () => {
-  let postsComponent = {};
-  let fixture = {};
+  let postsComponent: PostsComponent;
+  let fixture: ComponentFixture<PostsComponent>;
   const testPosts = [ { title: 'Badgers.', body: { html: 'Hi. '}, }];
-
-  beforeAll(()=> {
-        TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
-    });
 
   beforeEach(() => {
     let postsServiceMock = {

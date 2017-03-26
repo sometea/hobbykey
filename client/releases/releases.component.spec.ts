@@ -8,8 +8,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReleasesComponent } from './releases.component';
 
 describe('ReleasesComponent', () => {
-  let releasesComponent = {};
-  let fixture = {};
+  let releasesComponent: ReleasesComponent;
+  let fixture: ComponentFixture<ReleasesComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({

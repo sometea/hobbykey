@@ -8,7 +8,7 @@ declare var require: (filename: string) => any;
   template: require('./posts.template.html'),
 })
 export class PostsComponent {
-  private posts;
+  public posts;
   private postsService: PostsService;
 
   constructor(postsService: PostsService) {

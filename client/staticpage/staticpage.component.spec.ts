@@ -8,8 +8,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { StaticPageComponent } from './staticpage.component';
 
 describe('StaticPageComponent', () => {
-  let staticPageComponent = {};
-  let fixture = {};
+  let staticPageComponent: StaticPageComponent;
+  let fixture: ComponentFixture<StaticPageComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
