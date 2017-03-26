@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-
-import template from './app.template.html';
+declare var require: (filename: string) => any;
 
 @Component({
   selector: 'my-app',
-  template: template,
+  template: require('./app.template.html'),
 })
 export class AppComponent {
   name = 'Angular';

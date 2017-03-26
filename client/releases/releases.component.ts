@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-
-import template from './releases.template.html';
+declare var require: (filename: string) => any;
 
 @Component({
   selector: 'releases',
-  template: template,
+  template: require('./releases.template.html'),
 })
 export class ReleasesComponent {
 }

@@ -6,6 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class PostsService {
   postsUrl = '/api/posts';
+  http: Http;
 
   constructor(http: Http) {
     this.http = http;

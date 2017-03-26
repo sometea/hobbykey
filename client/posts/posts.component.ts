@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { PostsService } from '../posts/posts.service';
+declare var require: (filename: string) => any;
 
-import template from './posts.template.html';
 
 @Component({
   selector: 'posts',
-  template: template,
+  template: require('./posts.template.html'),
 })
 export class PostsComponent {
-  name = 'Angular';
+  private posts;
+  private postsService: PostsService;
 
   constructor(postsService: PostsService) {
     this.postsService = postsService;

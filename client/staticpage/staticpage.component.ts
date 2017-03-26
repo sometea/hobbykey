@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-
-import template from './staticpage.template.html';
+declare var require: (filename: string) => any;
 
 @Component({
   selector: 'staticpage',
-  template: template,
+  template: require('./staticpage.template.html')
 })
 export class StaticPageComponent {
 }

@@ -10,6 +10,6 @@ require('zone.js/dist/sync-test');
 require('zone.js/dist/proxy');
 require('zone.js/dist/jasmine-patch');
 
-require('./posts/posts.component.spec.js');
-require('./staticpage/staticpage.component.spec.js');
-require('./releases/releases.component.spec.js');
+require('./posts/posts.component.spec.ts');
+require('./staticpage/staticpage.component.spec.ts');
+require('./releases/releases.component.spec.ts');

@@ -4,8 +4,9 @@ require('es6-promise').polyfill();
 
 const config = {
 entry: {
-		bundle: path.join(__dirname, 'client', 'index.js'),
-		tests: path.join(__dirname, 'client', 'tests.js'),
+		bundle: path.join(__dirname, 'client', 'main.ts'),
+    polyfills: path.join(__dirname, 'client', 'polyfills.ts'),
+		//tests: path.join(__dirname, 'client', 'tests.js'),
   },
   output: {
     path: path.join(__dirname, 'public/js/generated'),
@@ -17,6 +18,11 @@ entry: {
         test: /\.js$/, // Transpile all .js files from ES6 to ES5
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader'
+      },
+      {
+        test: /.ts$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'ts-loader'
       },
       {
         test: /\.css$/, // Use the style-loader for all .css files
@@ -32,7 +38,10 @@ entry: {
       }
     ]
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.ts', '.js']
+  },
 };
 
 export default config;

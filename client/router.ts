@@ -7,7 +7,7 @@ import { StaticPageComponent } from './staticpage/staticpage.component';
 import { ReleasesComponent } from './releases/releases.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: 'posts', pathMatch: 'full', terminal: true },
+  { path: '', redirectTo: 'posts', pathMatch: 'full' },
   { path: 'posts', component: PostsComponent },
   { path: 'prinzipien', component: StaticPageComponent },
   { path: 'releases', component: ReleasesComponent }
