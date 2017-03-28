@@ -37,7 +37,10 @@ exports = module.exports = function (app) {
 	app.get('/', routes.views.index);
 
 	app.get('/api/posts', routes.views.posts);
+	app.get('/api/posts/:id', routes.views.postDetail);
 	app.get('/api/images', routes.views.images);
+	app.get('/api/releases', routes.views.releases);
+	app.get('/api/releases/:id', routes.views.releaseDetail);
 
 	// send the index file for all other urls to support angular html5mode
 	app.all('/*', routes.views.index);
