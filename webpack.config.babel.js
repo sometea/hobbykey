@@ -15,7 +15,7 @@ entry: {
   module: {
     loaders: [
       {
-        test: /\.js$/, // Transpile all .js files from ES6 to ES5
+        test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader'
       },
@@ -25,11 +25,11 @@ entry: {
         loader: 'ts-loader'
       },
       {
-        test: /\.css$/, // Use the style-loader for all .css files
+        test: /\.css$/,
         loaders: ['style-loader', 'css-loader']
       },
       {
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/, // Use the file-loader for fonts
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         loaders: ['file-loader']
       },
       {
