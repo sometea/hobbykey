@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 
-module.exports = new keystone.storage({
+module.exports = new keystone.Storage({
   adapter: keystone.Storage.Adapters.FS,
   schema: {
     originalname: true,
