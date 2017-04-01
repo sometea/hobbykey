@@ -1,13 +1,7 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
-var uploadedFilesStorage = new keystone.Storage({
-  adapter: keystone.Storage.Adapters.FS,
-  fs: {
-    path: keystone.expandPath('./public/uploads'),
-    publicPath: '/public/uploads',
-  },
-})
+var uploadedFilesStorage = require('./uploadedFilesStorage');
 
 var Release = new keystone.List('Release');
 
