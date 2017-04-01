@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ReleasesService } from './releases.service';
 declare var require: (filename: string) => any;
 
@@ -6,7 +6,8 @@ declare var require: (filename: string) => any;
   selector: 'releases',
   template: require('./releases.template.html'),
 })
-export class ReleasesComponent {
+export class ReleasesComponent implements OnInit {
+
   public releases: any;
 
   constructor(private releasesService: ReleasesService) {
@@ -14,5 +15,9 @@ export class ReleasesComponent {
 
   fetchReleases() {
     this.releasesService.getItems().subscribe( releases => { this.releases = releases; });
+  }
+
+  ngOnInit(): void {
+    this.fetchReleases();
   }
 }

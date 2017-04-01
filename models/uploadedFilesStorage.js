@@ -8,6 +8,6 @@ module.exports = new keystone.Storage({
   },
   fs: {
     path: keystone.expandPath('./public/uploads'),
-    publicPath: '/public/uploads',
+    publicPath: '/uploads/',
   },
 });
