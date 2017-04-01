@@ -12,7 +12,7 @@ import { ReleasesService } from './releases.service';
 describe('ReleasesComponent', () => {
   let releasesComponent: ReleasesComponent;
   let fixture: ComponentFixture<ReleasesComponent>;
-  const testReleases = [ { title: 'Release.', description: { html: 'Hi. '}, }];
+  const testReleases = [ { title: 'Release.', description: { html: 'Hi. '}, thumbnail: { url: 'test' }}];
 
   beforeEach(() => {
     let releasesServiceMock = {

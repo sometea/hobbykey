@@ -1,4 +1,6 @@
 <h2>Releases</h2>
-<span *ngFor="let release of releases"> 
-    <img [src]="release.thumbnail.url" [alt]="release.thumbnail.originalname" />
+<span *ngFor="let release of releases">
+    <a href="/releases/{{release._id}}">
+        <img [src]="release.thumbnail.url" [alt]="release.thumbnail.originalname" />
+    </a>
 </span>
