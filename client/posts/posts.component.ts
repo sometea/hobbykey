@@ -9,14 +9,12 @@ declare var require: (filename: string) => any;
 })
 export class PostsComponent {
   public posts;
-  private postsService: PostsService;
 
-  constructor(postsService: PostsService) {
-    this.postsService = postsService;
+  constructor(private postsService: PostsService) {
   }
 
   fetchPosts() {
-    this.postsService.getPosts().subscribe(posts => { this.posts = posts; });
+    this.postsService.getItems().subscribe(posts => { this.posts = posts; });
   }
 
   ngOnInit() {

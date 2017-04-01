@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ReleasesService } from './releases.service';
 declare var require: (filename: string) => any;
 
 @Component({
@@ -6,4 +7,12 @@ declare var require: (filename: string) => any;
   template: require('./releases.template.html'),
 })
 export class ReleasesComponent {
+  public releases: any;
+
+  constructor(private releasesService: ReleasesService) {
+  }
+
+  fetchReleases() {
+    this.releasesService.getItems().subscribe( releases => { this.releases = releases; });
+  }
 }

@@ -1,1 +1,4 @@
-<p>Releases</p>
+<h2>Releases</h2>
+<span *ngFor="let release of releases"> 
+    <img [src]="release.thumbnail.file.url" [alt]="release.thumbnail.file.originalname" />
+</span>

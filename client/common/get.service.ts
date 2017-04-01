@@ -10,7 +10,7 @@ export class GetService {
   constructor(private http: Http) {
   }
 
-  getPosts() {
+  getItems() {
     return this.http.get(this.getUrl)
       .map(response => response.json())
       .catch(err => this.handleError(err));

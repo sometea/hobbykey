@@ -15,7 +15,7 @@ describe('postsComponent', () => {
 
   beforeEach(() => {
     let postsServiceMock = {
-      getPosts() {
+      getItems() {
         return { subscribe(callback) {
             callback(testPosts);
           }

@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/map';
+import { Http } from '@angular/http';
 import { GetService } from '../common/get.service';
 
 @Injectable()
