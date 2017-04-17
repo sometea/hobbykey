@@ -1,4 +1,4 @@
-import path from 'path'; // Join paths with the right type of slash
+import * as path from 'path'; // Join paths with the right type of slash
 
 require('es6-promise').polyfill();
 
@@ -14,11 +14,6 @@ entry: {
   },
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader'
-      },
       {
         test: /.ts$/,
         exclude: /(node_modules|bower_components)/,
