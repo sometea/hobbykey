@@ -16,6 +16,12 @@ export class GetService {
       .catch(err => this.handleError(err));
   }
 
+  getItem(id: string) {
+    return this.http.get(this.getUrl + '/' + id)
+      .map(response => response.json())
+      .catch(err => this.handleError(err));
+  }
+
   handleError(error) {
     if (error.status === 401) console.log('Access denied');
     console.log('An error occurred', error);

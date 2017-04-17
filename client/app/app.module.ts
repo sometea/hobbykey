@@ -6,13 +6,20 @@ import { PostsService } from '../posts/posts.service';
 import { ReleasesService } from '../releases/releases.service';
 import { PostsComponent } from '../posts/posts.component';
 import { ReleasesComponent } from '../releases/releases.component';
+import { ReleasesDetailComponent } from '../releases/releasesDetail.component';
 import { StaticPageComponent } from '../staticpage/staticpage.component';
 
 import { routing } from '../router';
 
 @NgModule({
   imports: [ BrowserModule, HttpModule, routing ],
-  declarations: [ AppComponent, PostsComponent, ReleasesComponent, StaticPageComponent ],
+  declarations: [ 
+    AppComponent,
+    PostsComponent,
+    ReleasesComponent,
+    ReleasesDetailComponent,
+    StaticPageComponent 
+    ],
   bootstrap: [ AppComponent ],
   providers: [ PostsService, ReleasesService ],
 })
