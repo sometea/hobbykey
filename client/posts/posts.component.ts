@@ -14,7 +14,7 @@ export class PostsComponent {
   }
 
   fetchPosts() {
-    this.postsService.getItems().subscribe(posts => { this.posts = posts; });
+    this.posts = this.postsService.getItems();
   }
 
   ngOnInit() {

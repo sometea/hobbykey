@@ -9,7 +9,7 @@ declare var require: (filename: string) => any;
 })
 export class ReleasesComponent implements OnInit {
 
-  public releases: any;
+  public releases;
 
   constructor(
     private releasesService: ReleasesService,
@@ -18,7 +18,7 @@ export class ReleasesComponent implements OnInit {
   }
 
   fetchReleases() {
-    this.releasesService.getItems().subscribe( releases => { this.releases = releases; });
+    this.releases = this.releasesService.getItems();
   }
 
   onSelect(release) {
