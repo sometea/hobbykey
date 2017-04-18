@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By }              from '@angular/platform-browser';
 import { DebugElement }    from '@angular/core';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
@@ -40,7 +39,9 @@ describe('postsComponent', () => {
   });
 
   it('gets some posts from the service', () => {
+    let posts: any;
     postsComponent.fetchPosts();
-    expect(postsComponent.posts).toEqual(testPosts);
+    postsComponent.posts.subscribe(x => posts = x);
+    expect(posts).toEqual(testPosts);
   });
 });

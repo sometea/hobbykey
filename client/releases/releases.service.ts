@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { GetService } from "../common/get.service";
+import { GetService } from '../common/get.service';
 
 @Injectable()
 export class ReleasesService extends GetService {
