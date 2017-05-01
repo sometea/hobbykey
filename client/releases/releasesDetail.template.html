@@ -1,2 +1,11 @@
-<h3>Release Detail</h3>
-<div *ngIf="release | async">{{ (release | async)?._id }}</div>
+<div *ngIf="release | async">
+    <h3>{{ (release | async)?.title }}</h3>
+    <p>
+        <img [src]="(release | async)?.cover?.url" [alt]="(release | async)?.cover?.originalname"/>
+    </p>
+    <p>
+        File Download:<br/>
+        <a href="#">Link 1</a><br/>
+        <a href="#">Link 2</a><br/>
+    </p>
+</div>
