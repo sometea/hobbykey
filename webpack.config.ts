@@ -1,4 +1,5 @@
 import * as path from 'path'; // Join paths with the right type of slash
+import * as webpack from 'webpack';
 
 require('es6-promise').polyfill();
 
@@ -37,6 +38,12 @@ entry: {
   resolve: {
     extensions: ['.ts', '.js']
   },
+  plugins: [
+    new webpack.ContextReplacementPlugin(
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      __dirname
+    ),
+  ]
 };
 
 export default config;

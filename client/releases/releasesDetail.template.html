@@ -1,2 +1,2 @@
 <h3>Release Detail</h3>
-<div *ngIf="release">{{ release._id }}</div>
+<div *ngIf="release | async">{{ (release | async)?._id }}</div>

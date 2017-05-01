@@ -19,10 +19,7 @@ export class ReleasesDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      this.route.params
-      .switchMap((params: Params) => this.service.getItem(params['id']))
-      .subscribe(release => { 
-        this.release = release; 
-      });
+      this.release = this.route.params
+      .switchMap((params: Params) => this.service.getItem(params['id']));
   }
 }
