@@ -5,6 +5,7 @@ module.exports = new keystone.Storage({
   schema: {
     originalname: true,
     url: true,
+    mimetype: true,
   },
   fs: {
     path: keystone.expandPath('./public/uploads'),
