@@ -18,7 +18,7 @@ Release.add({
   description: { type: Types.Markdown },
   thumbnail: { type: Types.File, storage: uploadedFilesStorage },
   cover: { type: Types.File, storage: uploadedFilesStorage },
-  oggDownload: { type: Types.File, storage: uploadedFilesStorage },
+  flacDownload: { type: Types.File, storage: uploadedFilesStorage },
   mp3Download: { type: Types.File, storage: uploadedFilesStorage },
 });
 
@@ -32,7 +32,7 @@ Release.schema.pre('validate', function(next) {
     return;
   }
   if (this.oggDownload.originalname && this.oggDownload.mimetype !== mimetypeZip) {
-    next(new Error('The ogg download is not a zip file!'));
+    next(new Error('The flac download is not a zip file!'));
     return;
   }
   if (this.mp3Download.originalname && this.mp3Download.mimetype !== mimetypeZip) {
@@ -42,5 +42,5 @@ Release.schema.pre('validate', function(next) {
   next();
 });
 
-Release.defaultColumns = 'title, thumbnail, cover, oggDownload, mp3Download';
+Release.defaultColumns = 'title, thumbnail, cover, flacDownload, mp3Download';
 Release.register();
