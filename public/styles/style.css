@@ -13,16 +13,16 @@ body {
 
 #outerrow {
     border: 1px solid black;
+    display: flex;
 }
 
 #rightcolumn {
+    flex: 1;
     border-left: 1px solid black;
-    margin-left: -1px;
 }
 
 #leftcolumn {
-    border-right: 1px solid black;
-    margin-right: 0px;
+    flex: 1;
 }
 
 #logorow {
