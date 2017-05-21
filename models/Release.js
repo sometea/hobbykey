@@ -1,8 +1,10 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
+const fs = require('fs');
+const keystone = require('keystone');
+const Types = keystone.Field.Types;
 
-var uploadedFilesStorage = require('./uploadedFilesStorage');
+const uploadedFilesStorage = require('./uploadedFilesStorage');
 
+const uploadDir = './public/uploads/';
 const mimetypesImages = [
     'image/png',
     'image/jpeg',
@@ -11,7 +13,9 @@ const mimetypesImages = [
 
 const mimetypeZip = 'application/zip';
 
-var Release = new keystone.List('Release');
+var Release = new keystone.List('Release', {
+  track: true
+});
 
 Release.add({
   title: { type: Types.Text, initial: true, required: true, index: true },

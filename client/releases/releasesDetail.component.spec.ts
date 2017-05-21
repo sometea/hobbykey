@@ -32,8 +32,8 @@ describe('ReleasesDetailComponent', () => {
   it('renders a release once it has received one from the service', async(() => {
     fixture.detectChanges();
     fixture.whenStable().then(() => {
-      let htmlElement = fixture.debugElement.query(By.css('h3')).nativeElement;
-      expect(htmlElement.textContent).toEqual('TestRelease');
+      let htmlElement = fixture.debugElement.query(By.css('p')).nativeElement;
+      expect(htmlElement.textContent).toContain('TestRelease');
     });
   }));
 });

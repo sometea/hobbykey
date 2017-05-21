@@ -41,8 +41,8 @@ describe('ReleasesComponent', () => {
 
   it('displays a static template', async(() => {
     fixture.whenStable().then(() => {
-      let htmlElement = fixture.debugElement.query(By.css('h2')).nativeElement;
-      expect(htmlElement.textContent).toContain('Releases');
+      let htmlElement = fixture.debugElement.query(By.css('p')).nativeElement;
+      expect(htmlElement.textContent).toContain('Releases.');
     });
   }));
 

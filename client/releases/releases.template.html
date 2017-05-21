@@ -1,4 +1,4 @@
-<h2>Releases</h2>
+<p>Releases.</p>
 <span *ngFor="let release of releases | async">
     <a (click)="onSelect(release)">
         <img [src]="release.thumbnail.url" [alt]="release.thumbnail.originalname" />

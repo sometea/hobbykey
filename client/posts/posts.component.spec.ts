@@ -41,7 +41,7 @@ describe('postsComponent', () => {
     fixture.detectChanges();
     fixture.whenStable().then(() => {
       let htmlElement = fixture.debugElement.query(By.css('p')).nativeElement;
-      expect(htmlElement.textContent).toEqual('Badgers.');
+      expect(htmlElement.textContent).toContain('Badgers.');
     })
   }))
 });
