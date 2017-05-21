@@ -30,17 +30,18 @@ describe('postsComponent', () => {
     spy = spyOn(postsService, 'getItems').and.returnValue(Observable.of(testPosts));
   });
 
-  it('displays a hello world string', async(() => {
-    fixture.whenStable().then(() => {
-      let htmlElement = fixture.debugElement.query(By.css('h1')).nativeElement;
-      expect(htmlElement.textContent).toContain('Hello World!');
-    });
-  }));
-
   it('gets some posts from the service', async(() => {
     let posts: any;
     postsComponent.fetchPosts();
     postsComponent.posts.subscribe(x => posts = x);
     expect(posts).toEqual(testPosts);
   }));
+
+  it('displays the posts in the template', async(() => {
+    fixture.detectChanges();
+    fixture.whenStable().then(() => {
+      let htmlElement = fixture.debugElement.query(By.css('p')).nativeElement;
+      expect(htmlElement.textContent).toEqual('Badgers.');
+    })
+  }))
 });

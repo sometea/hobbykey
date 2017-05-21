@@ -1,5 +1,4 @@
-<h1>Hello World!</h1>
 <div *ngFor="let post of posts | async">
-  <h2>{{ post.title }}</h2>
+  <p>{{ post.title }}</p>
   <div [innerHtml]="post.body.html"></div>
 </div>

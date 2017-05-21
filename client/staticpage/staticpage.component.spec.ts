@@ -24,6 +24,6 @@ describe('StaticPageComponent', () => {
   it('displays a static template', () => {
     fixture.detectChanges();
     let htmlElement = fixture.debugElement.query(By.css('p')).nativeElement;
-    expect(htmlElement.textContent).toContain('Freude');
+    expect(htmlElement.textContent).toEqual('Prinzipien.');
   });
 });
