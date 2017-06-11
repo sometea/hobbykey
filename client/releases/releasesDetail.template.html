@@ -5,7 +5,7 @@
     </p>
     <p>
         File Download:<br/>
-        <a [href]="(release | async)?.flacDownload?.url">Flac Download</a><br/>
-        <a [href]="(release | async)?.mp3Download?.url">Mp3 Download</a><br/>
+        <a *ngIf="(release | async)?.flacDownload" [href]="(release | async)?.flacDownload?.url">Flac Download</a><br/>
+        <a *ngIf="(release | async)?.mp3Download" [href]="(release | async)?.mp3Download?.url">Mp3 Download</a><br/>
     </p>
 </div>
