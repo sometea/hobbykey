@@ -46,3 +46,7 @@ a {
     text-decoration: underline;
     color: black;
 }
+
+#menu a {
+    margin-right: 3em;
+}
